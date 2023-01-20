@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEBD3F50-8D7A-45B1-8630-D4F2FD028CF5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BatSpasScreensaver</RootNamespace>
+    <AssemblyName>BatSpasScreensaver</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\BatSpasScreensaver.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>appicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BatSpasScreensaverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatSpasScreensaverForm.Designer.cs">
+      <DependentUpon>BatSpasScreensaverForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BatSpasScreensaverForm.resx">
+      <DependentUpon>BatSpasScreensaverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appicon.ico" />
+    <None Include="Resources\_0001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0022.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0023.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0026.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0028.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0029.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0032.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0033.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0034.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0035.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0037.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0038.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0039.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0040.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0042.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0043.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0044.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0045.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0046.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0047.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0048.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0049.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0050.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0052.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0053.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0054.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0055.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0056.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0057.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0058.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0059.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0060.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0062.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0063.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0064.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0065.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0066.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0067.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0068.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0069.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0070.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0071.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0072.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0073.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0074.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0075.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0076.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0077.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0078.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0079.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0080.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0082.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0083.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0084.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0085.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0086.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0087.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0088.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0089.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0090.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0091.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0092.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0093.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0094.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0095.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0096.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0097.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0098.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0099.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0105.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0106.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0107.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0108.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0109.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0115.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0117.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0118.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0119.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0124.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0126.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0129.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0130.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0132.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0133.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0134.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0136.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0137.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0138.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0139.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0140.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0141.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0142.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0143.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0145.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0146.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0147.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0148.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0149.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0151.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0152.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0153.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0154.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0155.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0156.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0157.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0158.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0159.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0160.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0166.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0167.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0168.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0169.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0170.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0172.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0173.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0174.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0175.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0176.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0177.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0178.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0179.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0181.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0182.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0183.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0184.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0185.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0186.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0187.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0188.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0189.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0190.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0191.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0192.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0193.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0194.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0195.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0196.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0197.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0198.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0199.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0202.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0203.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0204.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0205.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0206.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0207.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0208.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0209.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\png\0210.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release (
+  move /y $(TargetFileName) $(TargetName).scr
+)
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
