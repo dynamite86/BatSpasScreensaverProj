@@ -53,6 +53,7 @@ namespace BatSpasScreensaver
             this.linkLabel_dynamite = new System.Windows.Forms.LinkLabel();
             this.linkLabel_NeEdward = new System.Windows.Forms.LinkLabel();
             this.timer_preview = new System.Windows.Forms.Timer(this.components);
+            this.label_freeware = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_playbackSpeed)).BeginInit();
             this.groupBox_settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_preview)).BeginInit();
@@ -66,6 +67,7 @@ namespace BatSpasScreensaver
             this.label4.Size = new System.Drawing.Size(311, 13);
             this.label4.TabIndex = 16;
             this.label4.Text = "Домашняя страничка команды спасателей летучих мышек:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // linkLabel1
             // 
@@ -83,14 +85,14 @@ namespace BatSpasScreensaver
             // 
             // numericUpDown_playbackSpeed
             // 
-            this.numericUpDown_playbackSpeed.Location = new System.Drawing.Point(276, 19);
+            this.numericUpDown_playbackSpeed.Location = new System.Drawing.Point(366, 19);
             this.numericUpDown_playbackSpeed.Minimum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.numericUpDown_playbackSpeed.Name = "numericUpDown_playbackSpeed";
-            this.numericUpDown_playbackSpeed.Size = new System.Drawing.Size(365, 20);
+            this.numericUpDown_playbackSpeed.Size = new System.Drawing.Size(288, 20);
             this.numericUpDown_playbackSpeed.TabIndex = 14;
             this.numericUpDown_playbackSpeed.Value = new decimal(new int[] {
             10,
@@ -128,18 +130,20 @@ namespace BatSpasScreensaver
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 13);
+            this.label3.Size = new System.Drawing.Size(354, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Скорость воспроизведения в миллисекундах (мс):";
+            this.label3.Text = "Скорость воспроизведения в миллисекундах (диапазон 10...100мс):";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 157);
+            this.label2.Location = new System.Drawing.Point(9, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Код:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -153,14 +157,14 @@ namespace BatSpasScreensaver
             this.label1.Size = new System.Drawing.Size(220, 25);
             this.label1.TabIndex = 9;
             this.label1.Text = "BatSpas Screensaver";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.UseMnemonic = false;
             // 
             // groupBox_settings
             // 
             this.groupBox_settings.Controls.Add(this.label3);
             this.groupBox_settings.Controls.Add(this.numericUpDown_playbackSpeed);
-            this.groupBox_settings.Location = new System.Drawing.Point(12, 267);
+            this.groupBox_settings.Location = new System.Drawing.Point(12, 283);
             this.groupBox_settings.Name = "groupBox_settings";
             this.groupBox_settings.Size = new System.Drawing.Size(660, 52);
             this.groupBox_settings.TabIndex = 17;
@@ -185,6 +189,7 @@ namespace BatSpasScreensaver
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 19;
             this.label6.Text = "Версия:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label_version
             // 
@@ -193,7 +198,8 @@ namespace BatSpasScreensaver
             this.label_version.Name = "label_version";
             this.label_version.Size = new System.Drawing.Size(71, 13);
             this.label_version.TabIndex = 20;
-            this.label_version.Text = "0.0.0.5 (Beta)";
+            this.label_version.Text = "0.0.0.6 (Beta)";
+            this.label_version.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
@@ -203,6 +209,7 @@ namespace BatSpasScreensaver
             this.label5.Size = new System.Drawing.Size(390, 13);
             this.label5.TabIndex = 22;
             this.label5.Text = "Если вы нашли летучую мышь, то обязательно прочитайте эту инструкцию:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // linkLabel_batUsage
             // 
@@ -220,44 +227,48 @@ namespace BatSpasScreensaver
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 170);
+            this.label7.Location = new System.Drawing.Point(18, 169);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(160, 13);
             this.label7.TabIndex = 23;
             this.label7.Text = "1)Frank McCown © 2010...2012";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 183);
+            this.label8.Location = new System.Drawing.Point(18, 182);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(130, 13);
             this.label8.TabIndex = 24;
             this.label8.Text = "2)dynamite © 2022...2023";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(18, 225);
+            this.label9.Location = new System.Drawing.Point(18, 224);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(132, 13);
             this.label9.TabIndex = 25;
             this.label9.Text = "Ne.Edward © 2022...2023";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 208);
+            this.label10.Location = new System.Drawing.Point(9, 207);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 13);
             this.label10.TabIndex = 26;
             this.label10.Text = "3D-визуализация:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // linkLabel_original
             // 
             this.linkLabel_original.AutoSize = true;
-            this.linkLabel_original.Location = new System.Drawing.Point(185, 170);
+            this.linkLabel_original.Location = new System.Drawing.Point(185, 169);
             this.linkLabel_original.Name = "linkLabel_original";
             this.linkLabel_original.Size = new System.Drawing.Size(210, 13);
             this.linkLabel_original.TabIndex = 27;
@@ -268,7 +279,7 @@ namespace BatSpasScreensaver
             // linkLabel_dynamite
             // 
             this.linkLabel_dynamite.AutoSize = true;
-            this.linkLabel_dynamite.Location = new System.Drawing.Point(185, 183);
+            this.linkLabel_dynamite.Location = new System.Drawing.Point(185, 182);
             this.linkLabel_dynamite.Name = "linkLabel_dynamite";
             this.linkLabel_dynamite.Size = new System.Drawing.Size(193, 13);
             this.linkLabel_dynamite.TabIndex = 28;
@@ -279,7 +290,7 @@ namespace BatSpasScreensaver
             // linkLabel_NeEdward
             // 
             this.linkLabel_NeEdward.AutoSize = true;
-            this.linkLabel_NeEdward.Location = new System.Drawing.Point(185, 225);
+            this.linkLabel_NeEdward.Location = new System.Drawing.Point(185, 224);
             this.linkLabel_NeEdward.Name = "linkLabel_NeEdward";
             this.linkLabel_NeEdward.Size = new System.Drawing.Size(193, 13);
             this.linkLabel_NeEdward.TabIndex = 29;
@@ -291,12 +302,24 @@ namespace BatSpasScreensaver
             // 
             this.timer_preview.Tick += new System.EventHandler(this.timer_preview_Tick);
             // 
+            // label_freeware
+            // 
+            this.label_freeware.AutoSize = true;
+            this.label_freeware.Location = new System.Drawing.Point(13, 252);
+            this.label_freeware.Name = "label_freeware";
+            this.label_freeware.Size = new System.Drawing.Size(570, 13);
+            this.label_freeware.TabIndex = 30;
+            this.label_freeware.Text = "Данный продукт является свободным для распространения (см. подробности выше по сс" +
+    "ылкам на лицензии)";
+            this.label_freeware.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(684, 391);
+            this.Controls.Add(this.label_freeware);
             this.Controls.Add(this.linkLabel_NeEdward);
             this.Controls.Add(this.linkLabel_dynamite);
             this.Controls.Add(this.linkLabel_original);
@@ -321,6 +344,7 @@ namespace BatSpasScreensaver
             this.MaximumSize = new System.Drawing.Size(700, 430);
             this.MinimumSize = new System.Drawing.Size(700, 430);
             this.Name = "SettingsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Настройки BatSpas Screensaver";
             this.Load += new System.EventHandler(this.SettingsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_playbackSpeed)).EndInit();
@@ -356,5 +380,6 @@ namespace BatSpasScreensaver
         private System.Windows.Forms.LinkLabel linkLabel_dynamite;
         private System.Windows.Forms.LinkLabel linkLabel_NeEdward;
         private System.Windows.Forms.Timer timer_preview;
+        private System.Windows.Forms.Label label_freeware;
     }
 }

@@ -3,7 +3,7 @@
  * By Frank McCown
  * Summer 2010
  *
- * Feel free to modify this code.
+ * https://sites.harding.edu/fmccown/screensaver/screensaver.html
  *
  *
  * Modified by dynamite
