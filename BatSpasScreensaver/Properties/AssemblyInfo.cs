@@ -10,8 +10,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("BatSpasScreensaver")]
-[assembly: AssemblyCopyright("Copyright © 2022-2023")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Code: dynamite © 2022...2023 (based on code by Frank McCown © 2010...2012). 3D visualization: Ne.Edward © 2022...2023")]
+[assembly: AssemblyTrademark("Night Dozhor © BatSpas")]
 [assembly: AssemblyCulture("")]
 
 // Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми
@@ -32,6 +32,6 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номера сборки и редакции по умолчанию 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.0.0.6")]
-[assembly: AssemblyFileVersion("0.0.0.6")]
+[assembly: AssemblyVersion("0.0.0.7")]
+[assembly: AssemblyFileVersion("0.0.0.7")]
 [assembly: NeutralResourcesLanguage("ru-RU")]

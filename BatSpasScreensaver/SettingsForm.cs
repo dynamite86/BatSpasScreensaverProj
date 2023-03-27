@@ -54,13 +54,13 @@ namespace BatSpasScreensaver
             if ((key == null)||((int)key.GetValue("interval") < 10))
             {
                 numericUpDown_playbackSpeed.Value = 10;
-                timer_preview.Interval = 10;
+                timer_preview.Interval = 1000 /10;
                 SaveSettings();
             }
             else
             {
                 numericUpDown_playbackSpeed.Value = (int)key.GetValue("interval");
-                timer_preview.Interval = (int)key.GetValue("interval");
+                timer_preview.Interval = 1000/(int)key.GetValue("interval");
             }
         }
 
@@ -126,7 +126,8 @@ namespace BatSpasScreensaver
         private void numericUpDown_playbackSpeed_ValueChanged(object sender, EventArgs e)
         {
             //if(timer_preview.)
-            timer_preview.Interval = (int)numericUpDown_playbackSpeed.Value;
+
+            timer_preview.Interval = 1000/(int)numericUpDown_playbackSpeed.Value;
         }
     }
 }

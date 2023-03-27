@@ -106,7 +106,7 @@ namespace BatSpasScreensaver
             }
             else
             {
-                timer_fps.Interval = (int)key.GetValue("interval");
+                timer_fps.Interval = 1000/(int)key.GetValue("interval");
             }
         }
 

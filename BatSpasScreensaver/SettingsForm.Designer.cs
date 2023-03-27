@@ -86,6 +86,11 @@ namespace BatSpasScreensaver
             // numericUpDown_playbackSpeed
             // 
             this.numericUpDown_playbackSpeed.Location = new System.Drawing.Point(366, 19);
+            this.numericUpDown_playbackSpeed.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
             this.numericUpDown_playbackSpeed.Minimum = new decimal(new int[] {
             10,
             0,
@@ -130,9 +135,9 @@ namespace BatSpasScreensaver
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(354, 13);
+            this.label3.Size = new System.Drawing.Size(287, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Скорость воспроизведения в миллисекундах (диапазон 10...100мс):";
+            this.label3.Text = "Скорость воспроизведения, кадров в секунду (10...60):";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -198,7 +203,7 @@ namespace BatSpasScreensaver
             this.label_version.Name = "label_version";
             this.label_version.Size = new System.Drawing.Size(71, 13);
             this.label_version.TabIndex = 20;
-            this.label_version.Text = "0.0.0.6 (Beta)";
+            this.label_version.Text = "0.0.0.7 (Beta)";
             this.label_version.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
